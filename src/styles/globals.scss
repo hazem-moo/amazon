@@ -1,0 +1,186 @@
+$speace10: 10px;
+$fontSize12: 12px;
+$color: rgb(153, 0, 0);
+$color1: #fff;
+* {
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+}
+// start header 
+header {
+  display: flex;
+  align-items: center;
+  img {
+    cursor: pointer;
+    margin-right: $speace10;
+  }
+  .sing {  
+    font-size: $fontSize12 + 2;
+    color: $color;
+    cursor: pointer;
+    margin-right: $speace10;
+    font-weight: 700;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: $speace10;
+    overflow: hidden;
+    background-color: $color;
+    border-radius: 15px;
+    input {
+      padding: $speace10 / 2;
+      width: 100%;
+      outline: none;
+    }
+    svg {
+      color: $color1;
+      font-size: $fontSize12 + 4;
+      width: 50px;
+    }
+  }
+  .favorite {
+    margin: 0 $speace10 $speace10 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    color: $color;
+    p {
+      font-size: $fontSize12 + 4;
+      font-weight: 600;
+      margin: 0 auto;
+    }
+    svg {
+      font-size: $fontSize12 * 2;
+    }
+  }
+  .card {
+    @extend .favorite;
+  }
+}
+
+// start product items 
+.products-items {
+  .card {
+    height: 300px;
+    cursor: pointer;
+    margin-bottom: $speace10 * 3;
+    box-shadow: 15px 15px 10px rgba($color, .5 );
+    .card-img {
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin: 0 auto;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 72px;
+      width: 100%;
+      text-align: center;
+      color: $color;
+      font-weight: 600;
+    }
+  }
+}
+
+// id && details 
+.id {
+  .header {
+    color: $color;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+  }
+  .id-img {
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    height: 100%;
+    p {
+      font-weight: 600;
+      color: $color;
+    }
+    h4 {
+      color: $color;
+    }
+    .star {
+      display: flex;
+      svg {
+        margin-right: 5px;
+        color: $color;
+      }
+    }
+    .btns {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      button {
+        padding: $speace10;
+        border: none;
+        color: $color;
+        font-weight: 600;
+        transition: all 1.5s ease;
+        &:hover {
+          @extend %hover;
+        }
+      }
+      p {
+        font-weight: 700;
+        font-size: $fontSize12 + 8;
+      }
+    }
+  }
+}
+
+// sing in 
+.sing-in {
+  margin: $speace10 * 3 0;
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 15px 15px 12px rgba($color, .6 );
+    justify-content: space-evenly;
+    input {
+      padding: $speace10;
+      width: 80%;
+      margin: 0 auto;
+    }
+    button {
+      width: 100px;
+      margin: 0 auto;
+      padding: $speace10;
+      border: 1px solid $color;
+      border-radius: 10px;
+      color: $color;
+      font-weight: 700;
+      transition: all 1s ease-in-out;
+      &:hover {
+        @extend %hover
+      }
+
+    }
+  }
+}
+
+%hover {
+  background-color: $color;
+  color: #fff;
+}
