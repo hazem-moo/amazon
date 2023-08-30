@@ -2,6 +2,7 @@ import { home } from '@/daata/home'
 import React, { Fragment } from 'react'
 import ProductsDetails from './productsDetails'
 import { Row } from 'react-bootstrap'
+import Overlay from './overlay'
 
 const ProductsItems = () => {
     let data1 = home.filter(el => el.category === `men's clothing` )
@@ -38,7 +39,7 @@ const ProductsItems = () => {
                 />
             ))}
         </Row>
-
+        <Overlay />
         <Row className='mx-4 my-5'>
             {data3.map(el => (
                 <ProductsDetails 

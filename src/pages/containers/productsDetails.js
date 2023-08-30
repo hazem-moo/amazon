@@ -7,7 +7,7 @@ const ProductsDetails = ({ key, id, name, dsc, src, rating, price }) => {
     
   return (
     <Fragment>
-        <div className='col-md-3' key={key}>
+        <div className='col-lg-3 col-md-6' key={key}>
             <Card onClick={() => rout.push(`../productId/${id}`)}>
                 <Card.Img src={src} alt='' />
                 <div>

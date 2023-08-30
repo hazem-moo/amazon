@@ -35,10 +35,10 @@ const Header = () => {
             <input type='search' placeholder='search...' />
             <FaSearch />
         </form>
-        <div className='favorite'>
+        {/* <div className='favorite'>
             <p>0</p>
             <FaHeart />
-        </div>
+        </div> */}
         <div className='card' onClick={() => rout.push('/basket')}>
             <p>{ item.length }</p>
             <BsCart4 />

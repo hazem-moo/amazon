@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 const IdDetails = ({ key, id, name, dsc, src, rating, price }) => {
     let dispatch = useDispatch()
     let item = useSelector(state => selectItemWithId(state, id) )
+
     let addToBasket = () => dispatch(addItemToBasket({ id, name, dsc, src, rating, price }))
     let removeFromBasket = () => dispatch(removeItemFromBasket({ id }))
 
@@ -22,7 +23,7 @@ const IdDetails = ({ key, id, name, dsc, src, rating, price }) => {
         <div className='col-md-6'>
             <div className='info'>
                 <p>{ dsc }</p>
-                <h4>price: { price }$</h4>
+                <h4>price: { price * 10 }$</h4>
                 <div className=' star'>
                     {Array(rating).fill().map((_, i) => (
                         <Fragment key={i}>
@@ -31,9 +32,9 @@ const IdDetails = ({ key, id, name, dsc, src, rating, price }) => {
                     ))}
                 </div>
                 <div className='btns'>
-                    <button onClick={addToBasket}>add to card</button>
+                    <button onClick={addToBasket}>add to basket</button>
                     <p>{ item.length }</p>
-                    <button onClick={removeFromBasket}>remove to card</button>
+                    <button onClick={removeFromBasket}>remove to basket</button>
                 </div>
             </div>
         </div>
