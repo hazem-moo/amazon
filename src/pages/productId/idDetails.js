@@ -21,7 +21,7 @@ const IdDetails = ({ key, id, name, dsc, src, rating, price }) => {
             </div>
         </div>
         <div className='col-md-6'>
-            <div className='info'>
+            <div className='info mt-3'>
                 <p>{ dsc }</p>
                 <h4>price: { price * 10 }$</h4>
                 <div className=' star'>

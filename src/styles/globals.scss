@@ -65,6 +65,12 @@ header {
 
 // start product items 
 .products-items {
+  h1 {
+    margin: $speace10 * 2 0;
+    border-bottom: 4px solid $color;
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: $speace10 * 3;
+  }
   .card {
     height: 300px;
     cursor: pointer;
@@ -125,8 +131,9 @@ header {
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    min-height: 400px;
+    min-height: 480px;
     height: 100%;
+    
     p {
       font-weight: 600;
       color: $color;
@@ -158,6 +165,7 @@ header {
       }
       p {
         font-weight: 700;
+        margin: 0 $speace10;
         font-size: $fontSize12 + 8;
       }
     }

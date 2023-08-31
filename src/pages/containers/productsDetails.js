@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import React, { Fragment } from 'react'
 import { Card, Row } from 'react-bootstrap'
 
-const ProductsDetails = ({ key, id, name, dsc, src, rating, price }) => {
+const ProductsDetails = ({ key, id, name, dsc, src, rating, price, category }) => {
     let rout = useRouter()
     
   return (
@@ -15,7 +15,6 @@ const ProductsDetails = ({ key, id, name, dsc, src, rating, price }) => {
                 </div>
             </Card>
         </div>
-
     </Fragment>
   )
 }

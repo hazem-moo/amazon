@@ -12,6 +12,9 @@ const ProductsItems = () => {
     
   return (
     <section className='products-items my-5'>
+        <div className='m-4 row'>
+            <h1 className='cpl-12'>men's clothing</h1>
+        </div>
         <Row className='mx-4 my-5'>
             {data1.map(el => (
                 <ProductsDetails 
@@ -26,6 +29,9 @@ const ProductsItems = () => {
             ))}
         </Row>
 
+        <div className='m-4 row'>
+            <h1 className='cpl-12'>jewelery</h1>
+        </div>
         <Row className='mx-4 my-5'>
             {data2.map(el => (
                 <ProductsDetails 
@@ -40,6 +46,10 @@ const ProductsItems = () => {
             ))}
         </Row>
         <Overlay />
+
+        <div className='m-4 row'>
+            <h1 className='cpl-12'>electronics</h1>
+        </div>
         <Row className='mx-4 my-5'>
             {data3.map(el => (
                 <ProductsDetails 
@@ -54,6 +64,9 @@ const ProductsItems = () => {
             ))}
         </Row>
 
+        <div className='m-4 row'>
+            <h1 className='cpl-12'>women's clothing</h1>
+        </div>
         <Row className='mx-4 my-5'>
             {data4.map(el => (
                 <ProductsDetails 

@@ -23,7 +23,7 @@ const Header = () => {
             placeholder='blur' 
             onClick={() => rout.push('/')}
         />
-        <div  className='sing d-none d-md-flex' onClick={() => rout.push('/sing-in')}>
+        <div  className='sing ' onClick={() => rout.push('/sing-in')}>
             <p>
                 {
                     sing.length === 0 ? 'sing in' : sing[0].name.length >= 9 ?
