@@ -14,10 +14,7 @@ export let basketSlice = createSlice({
         },
         removeItemFromBasket: (state, action) => {
             const idx = state.items.indexOf( action.payload )
-            if (state.items.length >= 0) {
-                state.items.splice(idx, 1)
-            }
-            // state.items.pop()
+            state.items = state.itmes.splice(idx, 1)
         },
         deleteItems: (state, {payload}) => {
             // console.log( payload )
